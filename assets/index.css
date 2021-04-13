@@ -41,3 +41,6 @@ canvas#background {
 img#lambdapad-big-logo {
   width: 200px;
 }
+div.marquee a {
+  margin-right: 50px;
+}
