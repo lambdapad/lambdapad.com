@@ -1,0 +1,20 @@
+{% include "head.html" %}
+
+<body class="td-section">
+  {% include "header.html" %}
+  <div class="container-fluid td-outer">
+    <div class="td-main">
+      <div class="row flex-xl-nowrap">
+        <main class="col-12 pl-md-5" role="main">
+          <div class="td-content">
+            {{ page.content | safe }}
+            <div class="text-muted mt-5 pt-3 border-top">
+              Last modified {% if page.updated %}{{ page.updated }}{% else %}{{ build.month }} {{ build.day }}, {{ build.year }}{% endif %}
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    {% include "footer.html" %}
+  </div>
+{% include "end.html" %}

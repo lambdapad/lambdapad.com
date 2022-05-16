@@ -1,0 +1,32 @@
+<header>
+  <nav class="js-navbar-scroll navbar navbar-expand navbar-dark td-navbar-cover flex-column flex-md-row td-navbar">
+    <a id="rebar3-top" class="navbar-brand"{% if not page.id %} style="display: none;"{% endif %} href="/">
+      <span class="navbar-logo">
+        <img src="/images/notepad.png" height="30px"/>
+      </span>
+      <span class="text-uppercase font-weight-bold">Lambdapad</span>
+    </a>
+    <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+      <ul class="navbar-nav mt-2 mt-lg-0">
+        <li class="nav-item mr-4 mb-2 mb-lg-0">
+          <a class="nav-link" href="/docs/"><span>Documentation</span></a>
+        </li>
+        {# TODO: perform some tutorials
+        <li class="nav-item mr-4 mb-2 mb-lg-0">
+          <a class="nav-link" href="/docs/tutorials/"><span>Tutorials</span></a>
+        </li>
+        #}
+        <li class="nav-item mr-4 mb-2 mb-lg-0">
+          <a class="nav-link" href="/about/"><span>About</span></a>
+        </li>
+      </ul>
+    </div>
+    {# TODO
+    <div class="navbar-nav d-none d-lg-block">
+      <input id="rebar3-search" type="search" class="form-control td-search-input"
+        placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete="off"
+        data-offline-search-index-json-url="/offline-search-index.648342b053f8f1fe8d96e3160b4dca2fc4263a7ddb78f154bb1167d72e7fb45df6d72906aaf35095f525fed6c94bd0b1c5dad5d3c2f87f784d94e7bc15f40b31.json">
+    </div>
+    #}
+  </nav>
+</header>

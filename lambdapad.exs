@@ -3,11 +3,15 @@ import Lambdapad
 blog do
   config do
     set transform: fn(config) ->
-      Map.put(config, "site_root", "/")
+      config
+      |> Map.put("site_root", "/")
+      |> Map.put("current_year", Date.utc_today().year)
     end
   end
 
   source posts: "posts/**/*.md"
+  source pages: "pages/**/*.md"
+  source docs: "docs/**/*.md"
 
   transform "order by date desc" do
     set on: :page
@@ -24,14 +28,14 @@ blog do
     end
   end
 
-  widget "teletype" do
-    set from: :posts
-    set index: true
-    set var_name: "posts"
-    set template: "teletype.html"
-    set transform_on_item: ["date"]
-    set transform_on_page: ["order by date desc"]
-  end
+  # widget "teletype" do
+  #   set from: :posts
+  #   set index: true
+  #   set var_name: "posts"
+  #   set template: "teletype.html"
+  #   set transform_on_item: ["date"]
+  #   set transform_on_page: ["order by date desc"]
+  # end
 
   # pages "posts" do
   #   set from: :posts
@@ -51,8 +55,35 @@ blog do
     set to: "site/download/lpad"
   end
 
+  widget "toc" do
+    set from: :docs
+    set var_name: "pages"
+    set index: true
+    set excerpt: false
+    set headers: false
+    set template: "toc.html"
+  end
+
   pages "index" do
     set template: "index.html"
     set uri: "/"
+  end
+
+  pages "docs" do
+    set from: :docs
+    set uri: ~s[{% if page.id != "index" %}/docs/{{ page.id }}{% else %}/docs{% endif %}]
+    set var_name: "page"
+    set excerpt: false
+    set headers: false
+    set template: "doc.html"
+  end
+
+  pages "pages" do
+    set from: :pages
+    set uri: "/{{ page.id }}"
+    set var_name: "page"
+    set excerpt: false
+    set headers: false
+    set template: "page.html"
   end
 end

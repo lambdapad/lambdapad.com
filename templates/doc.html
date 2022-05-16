@@ -1,0 +1,64 @@
+{% include "head.html" %}
+
+<body class="td-section">
+  {% include "header.html" %}
+  <div class="container-fluid td-outer">
+    <div class="td-main">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+          <div id="td-sidebar-menu" class="td-sidebar__inner">
+            {# TODO: search
+            <form class="td-sidebar__search d-flex align-items-center">
+              <input id="rebar3-search" type="search" class="form-control td-search-input"
+                placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete="off"
+                data-offline-search-index-json-url="/offline-search-index.648342b053f8f1fe8d96e3160b4dca2fc4263a7ddb78f154bb1167d72e7fb45df6d72906aaf35095f525fed6c94bd0b1c5dad5d3c2f87f784d94e7bc15f40b31.json">
+              <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button"
+                data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false"
+                aria-label="Toggle section navigation">
+              </button>
+            </form>
+            #}
+            {% widget "toc" %}
+          </div>
+        </div>
+        <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+          <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+            <a href="https://github.com/lambdapad/lambdapad.com/issues/new?title=Lambdapad%20Documentation"
+              target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+            <a href="https://github.com/lambdapad/lambdapad/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i>
+              Create project issue</a>
+          </div>
+        </div>
+        <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+          <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+            <ol class="breadcrumb spb-1">
+              <li class="breadcrumb-item active" aria-current="page">
+                <a href="/docs/">Documentation</a>
+              </li>
+            </ol>
+          </nav>
+          <div class="td-content">
+            {{ page.content | safe }}
+            {# XXX: ORIGINAL
+            <h1>Rebar3 Documentation</h1>
+            <div class="lead">Documentation and usage guides for Rebar3.</div>
+            <div class="section-index">
+              <hr class="panel-line">
+              <div class="entry">
+                <h5>
+                  <a href="/docs/configuration/">Rebar3 Configuration</a>
+                </h5>
+                <p>Configuring Rebar3 builds.</p>
+              </div>
+            </div>
+            #}
+            <div class="text-muted mt-5 pt-3 border-top">
+              Last modified {% if page.updated %}{{ page.updated }}{% else %}{{ build.month }} {{ build.day }}, {{ build.year }}{% endif %}
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    {% include "footer.html" %}
+  </div>
+{% include "end.html" %}
