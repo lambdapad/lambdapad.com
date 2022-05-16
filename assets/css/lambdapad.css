@@ -1,3 +1,26 @@
+.td-box--secondary {
+  background-color: #C2923C;
+}
+.td-box--secondary .td-arrow-down::before {
+  border-color: #C2923C transparent transparent transparent;
+}
+.btn-secondary {
+  background: #C2923C -webkit-gradient(linear,left top,left bottom,from(#e6b864),to(#C2923C)) repeat-x;
+  background: #C2923C -webkit-linear-gradient(top,#e6b864,#C2923C) repeat-x;
+  border-color: #C2923C;
+}
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show>.btn-secondary.dropdown-toggle {
+  background-color: #c2923c;
+  border-color: #c2923c;
+}
+.btn-secondary:hover {
+  background: #C2923C -webkit-gradient(linear,left top,left bottom,from(#e6b864),to(#C2923C)) repeat-x;
+  background: #C2923C -webkit-linear-gradient(top,#e6b864,#C2923C) repeat-x;
+  background: #C2923C -o-linear-gradient(top,#e6b864,#C2923C) repeat-x;
+  background: #C2923C linear-gradient(180deg,#e6b864,#C2923C) repeat-x;
+  border-color: #c2923c;
+}
+
 .st0 {
   fill: #e2e2e2
 }
