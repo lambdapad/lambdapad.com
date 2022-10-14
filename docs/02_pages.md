@@ -1,6 +1,8 @@
-[MD]: https://daringfireball.net/projects/markdown/syntax
+id: pages
+date: 2022-05-16
+title: Posts and Pages
 
-# Posts and Pages
+[MD]: https://daringfireball.net/projects/markdown/syntax
 
 We are using [Markdown][MD] for writing the docs and these markdown files have a header which usually should content the following fields for `posts`:
 

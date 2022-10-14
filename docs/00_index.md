@@ -1,4 +1,7 @@
-# Lambdapad
+id: index
+date: 2022-05-16
+updated: 2022-10-14
+title: Lambdapad
 
 ![lambdapad](/images/notepad.png)
 
@@ -15,7 +18,8 @@ Static website generator using Elixir or Erlang. Yes! you can use (syntactic) *s
 8. [Extensions](/docs/extensions/)
 9. [HTTP Server](/docs/http-server/)
 10. [New (Templates)](/docs/new/)
-11. [Contributing](/docs/contributing/)
+11. [New Post](/docs/new-post/)
+12. [Contributing](/docs/contributing/)
 
 If you love this content and want we can generate more, you can support us:
 

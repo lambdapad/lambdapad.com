@@ -1,7 +1,10 @@
+id: elixir-configuration
+date: 2022-05-16
+updated: 2022-10-14
+title: Elixir Configuration
+
 [TOML]: https://github.com/toml-lang/toml
 [EEx]: https://hexdocs.pm/eex/EEx.html
-
-# Elixir Configuration
 
 Everything is defined into two different files. The first one is the script in use to define what's going to take place (`lambdapad.exs`) and the other file is the configuration to get easier change parameters (`config.toml`). Both are necessary into your directory. The usual content for `config.toml` is as follows:
 

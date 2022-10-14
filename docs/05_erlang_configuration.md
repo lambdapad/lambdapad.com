@@ -1,4 +1,6 @@
-# Erlang Configuration
+id: erlang-configuration
+date: 2022-05-16
+title: Erlang Configuration
 
 Everything is defined into two different files. The first one is the script in use to define what's going to take place (`index.erl`) and the other file is the configuration to get easier change parameters (`blog.config`). Both are necessary into your directory. The usual content for `blog.config` is as follows:
 

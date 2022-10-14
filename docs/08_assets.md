@@ -1,4 +1,6 @@
-# Assets
+id: assets
+date: 2022-05-16
+title: Assets
 
 By default, if we are not indicating anything, the configuration block understood by the system is this one:
 

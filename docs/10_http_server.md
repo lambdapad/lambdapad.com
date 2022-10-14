@@ -1,4 +1,6 @@
-# HTTP Server
+id: http-server
+date: 2022-05-16
+title: HTTP Server
 
 Because it's easier if we can access directly the generated site, we are providing a subcommand to help you navigate through the generate pages:
 

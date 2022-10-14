@@ -1,4 +1,6 @@
-# Output Directory
+id: output-directory
+date: 2022-05-16
+title: Output Directory
 
 By convention, it's assumed we are putting our generated website into `site` directory. We can change this in every configuration using the following:
 

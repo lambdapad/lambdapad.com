@@ -1,8 +1,10 @@
+id: options
+date: 2022-05-16
+title: Options for Configuration
+
 [DT]: https://docs.djangoproject.com/en/3.1/topics/templates
 [TOML]: https://github.com/toml-lang/toml
 [EEx]: https://hexdocs.pm/eex/EEx.html
-
-# Options
 
 As you can see, at the moment, you can choose between Elixir or Erlang. You can write the way your web site is going to be generated based on those two options. But we can also decide about:
 

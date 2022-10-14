@@ -1,4 +1,6 @@
-# Contributing
+id: contributing
+date: 2022-05-16
+title: Contributing
 
 Yes! Please! :-) ... you can clone, perform changes and send a pull request via Github. It's not difficult.
 

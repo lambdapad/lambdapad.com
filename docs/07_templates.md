@@ -1,7 +1,9 @@
+id: templates
+date: 2022-05-16
+title: Templates
+
 [ED]: https://github.com/erlydtl/erlydtl
 [DT]: https://docs.djangoproject.com/en/3.1/topics/templates
-
-# Templates
 
 At this moment we support only [ErlyDTL][ED] for templates. This is based on [Django Templates][DT] and in use for different systems in the Python ecosystem.
 

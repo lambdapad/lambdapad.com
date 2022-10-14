@@ -60,7 +60,7 @@ blog do
     set var_name: "pages"
     set index: true
     set excerpt: false
-    set headers: false
+    set headers: true
     set template: "toc.html"
   end
 
@@ -74,7 +74,7 @@ blog do
     set uri: ~s[{% if page.id != "index" %}/docs/{{ page.id }}{% else %}/docs{% endif %}]
     set var_name: "page"
     set excerpt: false
-    set headers: false
+    set headers: true
     set template: "doc.html"
   end
 
