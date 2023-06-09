@@ -23,8 +23,16 @@ blog do
   transform "date" do
     set on: :item
     set run: fn(page, _config) ->
-      %_{year: year, month: month, day: day} = Date.from_iso8601!(page["date"])
-      Map.put(page, "_date", %{year: year, month: month, day: day})
+      if page_date = page["date"] do
+        %_{year: year, month: month, day: day} = Date.from_iso8601!(page_date)
+        Map.put(page, "_date", %{year: year, month: month, day: day})
+      else
+        today = Date.utc_today()
+
+        page
+        |> Map.put("date", to_string(today))
+        |> Map.put("_date", today)
+      end
     end
   end
 
@@ -50,11 +58,20 @@ blog do
     set to: "site/"
   end
 
+  # copy `lpad` binary to the download space
   assets "lpad" do
     set from: "lpad"
     set to: "site/download/lpad"
   end
 
+  pages "index" do
+    set template: "index.html"
+    set uri: "/"
+  end
+
+  # Documentation
+
+  # Table of Contents
   widget "toc" do
     set from: :docs
     set var_name: "pages"
@@ -62,11 +79,6 @@ blog do
     set excerpt: false
     set headers: true
     set template: "toc.html"
-  end
-
-  pages "index" do
-    set template: "index.html"
-    set uri: "/"
   end
 
   pages "docs" do
@@ -78,6 +90,7 @@ blog do
     set template: "doc.html"
   end
 
+  # Other pages (i.e. About)
   pages "pages" do
     set from: :pages
     set uri: "/{{ page.id }}"
@@ -85,5 +98,6 @@ blog do
     set excerpt: false
     set headers: false
     set template: "page.html"
+    set transform_on_item: ["date"]
   end
 end

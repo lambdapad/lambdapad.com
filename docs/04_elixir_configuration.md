@@ -209,7 +209,7 @@ The sets we can use for widgets are the following:
 
 The generation of the widgets is inserted into the configuration under the key `widgets`. But it's even easier to use, when we are into the template we have only to use:
 
-```htmldjango
+```django
 {% widget "recent posts" %}
 ```
 
