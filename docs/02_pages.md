@@ -1,6 +1,7 @@
 id: pages
 date: 2022-05-16
 title: Posts and Pages
+group: Core Concepts
 
 [MD]: https://daringfireball.net/projects/markdown/syntax
 

@@ -1,6 +1,7 @@
 id: contributing
 date: 2022-05-16
 title: Contributing
+group: Community
 
 Yes! Please! :-) ... you can clone, perform changes and send a pull request via Github. It's not difficult.
 

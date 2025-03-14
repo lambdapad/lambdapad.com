@@ -2,6 +2,7 @@ id: index
 date: 2022-05-16
 updated: 2022-10-14
 title: Lambdapad
+group: Introduction
 
 ![lambdapad](/images/notepad.png)
 

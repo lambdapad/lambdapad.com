@@ -2,6 +2,7 @@ id: elixir-configuration
 date: 2022-05-16
 updated: 2022-10-14
 title: Elixir Configuration
+group: Core Concepts
 
 [TOML]: https://github.com/toml-lang/toml
 [EEx]: https://hexdocs.pm/eex/EEx.html

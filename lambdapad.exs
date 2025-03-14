@@ -26,8 +26,20 @@ blog do
   # end
 
   assets "general" do
-    set(from: "assets/**")
+    set(from: "assets/{favicons,images,webfonts}/**")
     set(to: "site/")
+  end
+
+  assets "js" do
+    set(from: "assets/**/*.js")
+    set(to: "site/")
+    set(tool: :esbuild)
+  end
+
+  assets "css" do
+    set(from: "assets/**/*.css")
+    set(to: "site/")
+    set(tool: :tailwind)
   end
 
   # copy `lpad` binary to the download space

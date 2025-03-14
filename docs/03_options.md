@@ -1,6 +1,7 @@
 id: options
 date: 2022-05-16
 title: Options for Configuration
+group: Core Concepts
 
 [DT]: https://docs.djangoproject.com/en/3.1/topics/templates
 [TOML]: https://github.com/toml-lang/toml

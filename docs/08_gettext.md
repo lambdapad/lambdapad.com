@@ -1,6 +1,7 @@
 id: gettext
 date: 2024-05-05
 title: Gettext (i18n)
+group: Core Concepts
 
 ~_New in 0.10.0_~
 

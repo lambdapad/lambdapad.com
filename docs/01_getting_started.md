@@ -1,6 +1,7 @@
 id: getting-started
 date: 2022-05-16
 title: Getting Started
+group: Introduction
 
 You need only to get the code, from source code you can:
 

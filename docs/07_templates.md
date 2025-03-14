@@ -2,6 +2,7 @@ id: templates
 date: 2022-05-16
 updated: 2023-06-09
 title: Templates
+group: Core Concepts
 
 [ED]: https://github.com/erlydtl/erlydtl
 [DT]: https://docs.djangoproject.com/en/3.1/topics/templates

@@ -1,6 +1,7 @@
 id: new-post
 date: 2022-10-14
 title: New Post
+group: Commands
 
 ~_New in 0.8.0_~
 
