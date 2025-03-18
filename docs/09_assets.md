@@ -86,3 +86,28 @@ assets "css" do
   ]
 end
 ```
+
+### JavaScript packages with NPM
+
+We can also use `package.json` for installing the desired JavaScript packages for our frontend. A specific block can be defined as:
+
+```elixir
+assets "node_modules" do
+  set from: "package.json"
+  set tool: :npm
+end
+```
+
+In difference of the previous ones, this doesn't need `to` configuration and even the `from` configuration is a bit tricky because it's not possible to use a different filename that's not called `package.json`. We are getting only the path where the file is.
+
+We could even provide more configuration just in case we have the NPM installed in a different place and it's not configured in our PATH:
+
+```elixir
+assets "node_modules" do
+  set from: "package.json"
+  set tool: :npm
+  set npm: [
+    path: "/usr/local/npm/bin/npm"
+  ]
+end
+```
