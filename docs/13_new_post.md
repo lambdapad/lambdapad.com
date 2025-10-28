@@ -9,7 +9,7 @@ The `new-post` command let us create a post inside of our blog structure based o
 
 The command is:
 
-```
+```sh
 lpad new-post pacelc-is-here \
     -b "title=PACELC is here" \
     -b "subtitle=A different approach from CAP" \
@@ -31,4 +31,3 @@ As you can see, we can define the slug name (or ID) for the blog post, and then 
   - `name`: name or ID for the post.
 
 - `-p` or `--posts-path`: let us define the name and path for the post to be created, by default it will be: `posts/#{yyyy}/#{mm}/#{dd}/#{slug}.md`
-

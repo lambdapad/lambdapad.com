@@ -30,10 +30,19 @@ blog do
     set(to: "site/")
   end
 
+  assets "node_modules" do
+    set(from: "package.json")
+    set(tool: :npm)
+    set(priority: :high)
+  end
+
   assets "js" do
     set(from: "assets/**/*.js")
     set(to: "site/")
     set(tool: :esbuild)
+    set(esbuild: [
+      target: "es2017"
+    ])
   end
 
   assets "css" do
