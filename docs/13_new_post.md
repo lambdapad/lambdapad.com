@@ -1,5 +1,6 @@
 id: new-post
 date: 2022-10-14
+updated: 2025-11-06
 title: New Post
 group: Commands
 
@@ -31,3 +32,27 @@ As you can see, we can define the slug name (or ID) for the blog post, and then 
   - `name`: name or ID for the post.
 
 - `-p` or `--posts-path`: let us define the name and path for the post to be created, by default it will be: `posts/#{yyyy}/#{mm}/#{dd}/#{slug}.md`
+
+- `-i` or `--interactive`: based on this flag you can provide the specific data for the headers in an interactive way.
+
+But first, figure it out we create these fields in our configuration `config.toml`:
+
+```toml
+[blog.template_headers]
+id = "#{slug}"
+title = "#{title}"
+subtitle = ""
+author = "manuel"
+category = ""
+tags = ""
+featured = ""
+background = ""
+```
+
+This means you are going to define these data using bindings, indeed, because we use `"#{title}` it's intended it should be provided by bind option. But what about subtitle, category, or tags? Just run:
+
+```
+lpad new-post -i my-new-post
+```
+
+It will do exactly the same but it starts to ask you about the fields previously to put them inside of the file.
